@@ -7,8 +7,15 @@ router.post('/api/list', function(req, res, next) {
 	page_num = parseInt(page_num);
 	var now_page = req.body.now_page || 1;
 	now_page = parseInt(now_page);
-	var query = addmodel.find({flag:1}).skip((now_page - 1) * page_num).limit(page_num);
-	addmodel.count({flag:1},function(err,count){
+	var keys = req.body.keywords;
+	var conditions = null;
+	if(keys){
+		conditions = {flag:1,"goods_name":{$regex : keys}};
+	}else{
+		conditions = {flag:1};
+	}
+	var query = addmodel.find(conditions).skip((now_page - 1) * page_num).limit(page_num);
+	addmodel.count(conditions,function(err,count){
 		var divi = Math.ceil(count / page_num);
 		query.exec(function(err,docs){
 			if(!err){
@@ -55,17 +62,17 @@ router.post('/api/addajax',function(req,res,next){
 //删除功能
 router.post('/api/delete',function(req,res,next){
 	var keywords = req.body.keys;
-	addmodel.update({"goods_num":keywords},{$set:{flag:0}},function(err,docs){
+	addmodel.update({"goods_num":keywords},{$set:{flag:1}},function(err,docs){
 		if(!err){
 			var result = {
-					change_success : 100,
+					change_success : 90,
 					data : docs
 				}
 			res.json(result);
 		}
 	})
 })
-//改
+//改(原页面)
 router.post('/api/change',function(req,res,next){
 	var keywords = {"goods_num" : req.body.keywords};
 	var word = req.body.key;
@@ -81,6 +88,38 @@ router.post('/api/change',function(req,res,next){
 		if(!err){
 			var result = {
 					change_success : 100,
+					data : docs
+				}
+			res.json(result);
+		}
+	})
+})
+//改(编辑页面)
+router.get('/api/the_editor',function(req,res,next){
+	var keywords = {"goods_num" : req.query.num};
+	addmodel.find(keywords,function(err,docs){
+		if(!err){
+			var result = {
+					save_success : 80,
+					data : docs
+				}
+			res.json(result);
+		}
+	})
+})
+//改(编辑页面,保存)
+router.post('/api/save',function(req,res,next){
+	var keywords = {"goods_num" : req.body.num};
+	var update = {
+		"goods_name" : req.body.goods_name,
+		"goods_dose" : req.body.goods_dose,
+		"goods_category" : req.body.goods_category,
+		"goods_price" : req.body.goods_price
+	}
+	addmodel.update(keywords,update,function(err,docs){
+		if(!err){
+			var result = {
+					save_success : 70,
 					data : docs
 				}
 			res.json(result);

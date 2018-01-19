@@ -9,28 +9,36 @@ $(".main ul li").click(function(){
 })
 //提交ajax请求
 $("#subm").click(function(){
-	var name = $("#pround_name");
-	var price = $("#pround_price");
-	var select = $("#sel_class");
-	if(!name.val()){
+	var name = $("#pround_name").val();
+	var price = $("#pround_price").val();
+	var select = $("#sel_class").val();
+	var code = $("#pround_code").val();
+	if(!name){
 		alert("请输入商品名称");
-	}else if(select.val() == "请选择..."){
+	}else if(select == "请选择..."){
 		alert("请选择商品分类");
-	}else if(!price.val()){
+	}else if(!price){
 		alert("请输入商品价格");
+		if(/^\d+$/.test(price)){
+			if(!/^\d+(\.00)$/g.test(price)){
+				price = price + ".00";
+			}
+		}else{
+			alert("请输入数字！");
+		}
 	}else{
-		add_ajax();
+		add_ajax(name,price,select,code);
 	}
 })
-function add_ajax(){
+function add_ajax(name,price,select,code){
 	$.ajax({
 		url : "/goods/api/addajax",
 		type : "POST",
 		data : {
-			name : $("#pround_name").val(),
-			price : $("#pround_price").val(),
-			select : $("#sel_class").val(),
-			code : $("#pround_code").val()
+			name : name,
+			price : price,
+			select : select,
+			code : code
 		},
 		success : function(res){
 			console.log(res);

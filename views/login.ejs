@@ -31,11 +31,8 @@
 <script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
 <script type="text/javascript">
 	function random(){
-	var ran = "";
-	for(var i = 0;i < 4;i ++){
-		ran += Math.floor(Math.random() * 10) || String.fromCharCode(Math.floor(Math.random() * (90 - 65 + 1) + 65));
-	}
-	return ran;
+		var ran = Math.random().toString(36).substr(2,4).toUpperCase();
+		return ran;
 	}
 	$(".ran").html(random());
 	$(".ran").click(function() {

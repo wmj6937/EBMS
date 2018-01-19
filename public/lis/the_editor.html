@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/addgoods.css">
+</head>
+<body>
+	<div class="add_new_goods">
+		<h2>
+			<i>ECSHOP管理中心</i>
+			<b>-编辑商品信息</b>
+			<img src="/img/jnsy.png">
+			<a href="list.html">+商品列表</a>
+		</h2>
+		<div class="main">
+			<ul>
+				<li>通用信息</li>
+				<li>详细描述</li>
+				<li>其他信息</li>
+				<li>商品属性</li>
+				<li>商品相册</li>
+				<li>关联商品</li>
+				<li>配件</li>
+				<li>关联文章</li>
+			</ul>
+			<div class="currency">
+					<p>
+						<label>商品名称：</label>
+						<input type="text" name="" id="pround_name" value="">
+						<select>
+							<option>字体样式</option>
+							<option>加粗</option>
+							<option>斜体</option>
+							<option>下划线</option>
+							<option>删除线</option>
+						</select>
+						<i>*</i>
+					</p>
+					<p>
+						<label><img src="/img/notice.gif">商品货号：</label>
+						<input type="text" name="" id="pround_code">
+					</p>
+					<b>如果您不输入商品货号，系统将自动生成一个唯一的货号。</b>
+					<p>
+						<label>商品分类：</label>
+						<select id="sel_class">
+							<option>请选择...</option>
+							<option>钻石</option>
+							<option>手机</option>
+							<option>T恤</option>
+							<option>裤子</option>
+							<option>鞋</option>
+							<option>卫衣</option>
+							<option>大衣</option>
+							<option>护肤品</option>
+						</select>
+						<button>添加分类</button>
+						<em>
+							<input type="text" name="">
+							<button>确定</button>
+							<button>&lt;&lt;</button>
+						</em>
+						<i>*</i>
+					</p>
+					<p>
+						<label>扩展分类：</label>
+						<button>添加</button>
+					</p>
+					<p>
+						<label>商品品牌：</label>
+						<select>
+							<option>请选择...</option>
+							<option>天平鸟</option>
+							<option>oppo</option>
+							<option>vivo</option>
+							<option>联想</option>
+							<option>方正</option>
+							<option>耐克</option>
+							<option>阿迪达斯</option>
+							<option>漫步者</option>
+						</select>
+						<button>添加品牌</button>
+						<em>
+							<input type="text" name="">
+							<button>确定</button>
+							<button>&lt;&lt;</button>
+						</em>
+					</p>	
+					<p>
+						<label>本店售价：</label>
+						<input type="text" name="" id="pround_price">
+						<button>按市场价计算</button>
+						<i>*</i>
+					</p>
+					<p>
+						<label><img src="/img/notice.gif">会员价格：</label>
+						<span>注册用户</span><input type="text" name="">
+						<span>代销用户</span><input type="text" name="">
+						<span>vip</span><input type="text" name="">
+					</p>
+					<b>会员价格为-1时表示会员价格按会员等级折扣率计算。你也可以为每个等级指定一个固定价格</b>
+					<p>
+						<label><img src="/img/notice.gif">商品优惠价格：</label>
+						<span>优惠数量</span><input type="text" name="">
+						<span>优惠价格</span><input type="text" name="">
+					</p>
+					<b>购买数量达到优惠数量时享受的优惠价格</b>
+					<p>
+						<label>市场价：</label>
+						<input type="text" name="">
+						<button>取整数</button>
+					</p>
+					<p>
+						<label>虚拟销量：</label>
+						<input type="text" name="">
+					</p>
+					<p>
+						<label><img src="/img/notice.gif">赠送消费积分数：</label>
+						<input type="text" name="">
+					</p>
+					<b>购买该商品时赠送消费积分数,-1表示按商品价格赠送</b>
+					<p>
+						<label><img src="/img/notice.gif">赠送等级积分数：</label>
+						<input type="text" name="">
+					</p>
+					<b>购买该商品时赠送等级积分数,-1表示按商品价格赠送</b>
+					<p>
+						<label><img src="/img/notice.gif">积分购买金额：</label>
+						<input type="text" name="">
+					</p>
+					<b>(此处需填写金额)购买该商品时最多可以使用积分的金额</b>
+					<p>
+						<label><input type="checkbox" name="">促销价：</label>
+						<input type="text" name="">
+					</p>
+					<p>
+						<label>促销日期：</label>
+						<input type="text" name=""><button>选择</button>-
+						<input type="text" name=""><button>选择</button>
+					</p>
+					<p>
+						<label>上传商品图片：</label>
+						<input type="file" name=""></br>
+						<input type="url" name="" placeholder="商品图片外部URL">
+					</p>
+					<p>
+						<label>上传商品缩略图：</label>
+						<input type="file" name=""></br>
+						<input type="url" name="" placeholder="商品缩略图外部URL">
+					</p>
+					<p>
+						<button id="subm">提交</button>
+						<button>重置</button>
+					</p>
+				</form>	
+			</div>
+			<div class="describe">
+				<textarea name="textarea"></textarea>
+				<p>
+					<button>提交</button>
+					<button>重置</button>
+				</p>
+			</div>
+			<div class="other">
+				<p>
+					<label>商品重量：</label>
+					<input type="text" name="">
+					<select>
+						<option>千克</option>
+						<option>克</option>
+					</select>
+				</p>
+				<p>
+					<label><img src="/img/notice.gif">商品库存数量：</label>
+					<input type="text" name=""></br>
+					<em>库存在商品为虚货或商品存在货品时为不可编辑状态，库存数值取决于其虚货数量或货品数量</em>
+				</p>
+				<p>
+					<label>库存警告数量：</label>
+					<input type="text" name="">
+				</p>
+				<p>
+					<label>加入推荐：</label>
+					<input type="checkbox" name="Recommend"><span>精品</span>
+					<input type="checkbox" name="Recommend"><span>新品</span>
+					<input type="checkbox" name="Recommend"><span>热销</span>
+				</p>
+				<p>
+					<label>上架：</label>
+					<input type="checkbox" name=""><span>打勾表示允许销售，否则不允许销售。</span>
+				</p>
+				<p>
+					<label>能作为普通商品销售：</label>
+					<input type="checkbox" name=""><span>打勾表示能作为普通商品销售，否则只能作为配件或赠品销售。</span>
+				</p>
+				<p>
+					<label>是否为免运费商品：</label>
+					<input type="checkbox" name=""><span>打勾表示此商品不会产生运费花销，否则按照正常运费计算。</span>
+				</p>
+				<p>
+					<label>商品关键词：</label>
+					<input type="text" name=""><span>用空格分隔</span>
+				</p>
+				<p>
+					<label>商品简单描述：</label>
+					<textarea name="textarea"></textarea>
+				</p>
+				<p>
+					<label><img src="/img/notice.gif">商家备注：</label>
+					<textarea name="textarea"></textarea></br>
+					<em>仅供商家自己看的信息</em>
+				</p>
+				<p>
+					<button>提交</button>
+					<button>重置</button>
+				</p>
+			</div>
+			<div class="attribute">
+				<p>
+					<label><img src="/img/notice.gif">商品类型：</label>
+					<select>
+						<option>选择商品类型</option>
+						<option>书</option>
+						<option>音乐</option>
+						<option>电影</option>
+						<option>手机</option>
+						<option>笔记本电脑</option>
+						<option>化妆品</option>
+						<option>服饰</option>
+						<option>美妆</option>
+					</select></br>
+					<b>请选择商品的所属类型，进而完善此商品的属性</b>
+				</p>
+				<p>
+					<button>提交</button>
+					<button>重置</button>
+				</p>
+			</div>
+			<div class="album">
+				<p>
+					<span>[+]</span>
+					<i>图片描述</i><input type="text" name="">
+					<i>上传文件</i><input type="file" name="">
+					<input type="url" name="" placeholder="或输入外部url地址">
+				</p>
+				<p>
+					<button>提交</button>
+					<button>重置</button>
+				</p>
+			</div>
+			<div class="associated">
+				<p>
+					<img src="/img/icon_search.gif">
+					<select>
+						<option>请选择...</option>
+						<option>钻石</option>
+						<option>手机</option>
+						<option>T恤</option>
+						<option>裤子</option>
+						<option>鞋</option>
+						<option>卫衣</option>
+						<option>大衣</option>
+						<option>护肤品</option>
+					</select>
+					<select>
+						<option>请选择...</option>
+						<option>天平鸟</option>
+						<option>oppo</option>
+						<option>vivo</option>
+						<option>联想</option>
+						<option>方正</option>
+						<option>耐克</option>
+						<option>阿迪达斯</option>
+						<option>漫步者</option>
+					</select>
+					<input type="text" name="">
+					<button>搜索</button>
+				</p>
+				<div class="text_main">
+					<div class="text_left">
+						<span>可选商品</span>
+						<select></select>
+					</div>
+					<div class="operation">
+						<span>操作</span>
+						<b><input type="radio" name="rela">单向关联</b>
+						<b><input type="radio" name="rela">双向关联</b>
+						<i>&gt;&gt;</i>
+						<em>&gt;</em>
+						<em>&lt;</em>
+						<i>&lt;&lt;</i>
+					</div>	
+					<div class="text_right">
+						<span>跟该商品关联的商品</span>
+						<select></select>
+					</div>
+				</div>
+				<p>
+					<button>提交</button>
+					<button>重置</button>
+				</p>
+			</div>
+			<div class="parts">
+				<p>
+					<img src="/img/icon_search.gif">
+					<select>
+						<option>请选择...</option>
+						<option>钻石</option>
+						<option>手机</option>
+						<option>T恤</option>
+						<option>裤子</option>
+						<option>鞋</option>
+						<option>卫衣</option>
+						<option>大衣</option>
+						<option>护肤品</option>
+					</select>
+					<select>
+						<option>请选择...</option>
+						<option>天平鸟</option>
+						<option>oppo</option>
+						<option>vivo</option>
+						<option>联想</option>
+						<option>方正</option>
+						<option>耐克</option>
+						<option>阿迪达斯</option>
+						<option>漫步者</option>
+					</select>
+					<input type="text" name="">
+					<button>搜索</button>
+				</p>
+				<div class="text_main">
+					<div class="text_left">
+						<span>可选商品</span>
+						<select></select>
+					</div>
+					<div class="operation">
+						<span>操作</span>
+						<b>价格</b>
+						<input type="text" name="">
+						<em>&gt;</em>
+						<em>&lt;</em>
+						<i>&lt;&lt;</i>
+					</div>	
+					<div class="text_right">
+						<span>该商品配件</span>
+						<select></select>
+					</div>
+				</div>
+				<p>
+					<button>提交</button>
+					<button>重置</button>
+				</p>
+			</div>
+			<div class="article">
+				<p>
+					<img src="/img/icon_search.gif">
+					<label>文章标题</label>
+					<input type="text" name="">
+					<button>搜索</button>
+				</p>
+				<div class="text_main">
+					<div class="text_left">
+						<span>可选文章</span>
+						<select></select>
+					</div>
+					<div class="operation">
+						<span>操作</span>
+						<i>&gt;&gt;</i>
+						<em>&gt;</em>
+						<em>&lt;</em>
+						<i>&lt;&lt;</i>
+					</div>	
+					<div class="text_right">
+						<span>跟该商品关联的文章</span>
+						<select></select>
+					</div>
+				</div>
+				<p>
+					<button>提交</button>
+					<button>重置</button>
+				</p>
+			</div>
+		</div>
+		<div class="list_foot">
+			<p>共执行 9 个查询，用时 0.039003 秒，Gzip 已禁用，内存占用 3.588 MB</p>
+			<p>版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。</p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="/js/the_editor.js"></script>
+</html>
