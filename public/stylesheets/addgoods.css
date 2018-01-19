@@ -1,0 +1,514 @@
+@charset "UTF-8";
+body, ul, li, dl, dt, dd, p, ol, h1, h2, h3, h4, h5, h6, form, img, table, fieldset, legend, input, th, td, iframe {
+  margin: 0;
+  padding: 0; }
+
+ol, ul, li {
+  list-style: none; }
+
+img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6, b, strong {
+  font-weight: 100; }
+
+body {
+  font-size: 12px;
+  font-family: "微软雅黑"; }
+
+input, a {
+  outline: none; }
+
+input, img {
+  vertical-align: top; }
+
+i, em {
+  font-style: normal; }
+
+.add_new_goods {
+  height: 100%;
+  overflow-y: auto;
+  padding: 10px; }
+  .add_new_goods h2 {
+    line-height: 40px;
+    height: 40px;
+    border-bottom: 1px solid #cccccc;
+    overflow: hidden; }
+    .add_new_goods h2 i {
+      color: #333333; }
+    .add_new_goods h2 b {
+      color: #4c4c4c;
+      margin-right: 15px; }
+    .add_new_goods h2 img {
+      margin-top: 7px; }
+    .add_new_goods h2 a {
+      display: block;
+      float: right;
+      width: 98px;
+      height: 26px;
+      background: #c43926;
+      color: #fff;
+      line-height: 26px;
+      text-align: center;
+      font-size: 14px;
+      border-radius: 3px;
+      margin-top: 7px; }
+  .add_new_goods .main {
+    background: #fefefe;
+    border: 1px solid #dddddd;
+    margin: 10px 0; }
+    .add_new_goods .main ul {
+      height: 40px;
+      background: #efefef;
+      padding: 2px 0 0 10px;
+      overflow: hidden; }
+      .add_new_goods .main ul li {
+        width: 88px;
+        float: left;
+        color: #787878;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer; }
+      .add_new_goods .main ul li:nth-child(1) {
+        background: #fff;
+        color: #000; }
+    .add_new_goods .main .currency {
+      width: 700px;
+      margin: 0 auto;
+      padding-top: 12px; }
+      .add_new_goods .main .currency p {
+        line-height: 40px; }
+        .add_new_goods .main .currency p label {
+          width: 120px;
+          display: inline-block;
+          text-align: right;
+          padding-right: 20px; }
+          .add_new_goods .main .currency p label img {
+            vertical-align: middle;
+            margin-right: 4px; }
+        .add_new_goods .main .currency p input {
+          vertical-align: middle;
+          margin-right: 5px; }
+        .add_new_goods .main .currency p i {
+          color: #ff3f3f;
+          margin-left: 18px; }
+      .add_new_goods .main .currency p:nth-of-type(1) input {
+        width: 190px; }
+      .add_new_goods .main .currency p:nth-of-type(3) select {
+        width: 158px; }
+      .add_new_goods .main .currency p:nth-of-type(3) button {
+        background: #ddeef2;
+        color: #335b64; }
+      .add_new_goods .main .currency p:nth-of-type(3) em {
+        display: none; }
+      .add_new_goods .main .currency p:nth-of-type(4) button, .add_new_goods .main .currency p:nth-of-type(15) button {
+        background: #ff3f3f;
+        color: #fff;
+        width: 54px;
+        height: 27px;
+        border: none;
+        border-radius: 3px; }
+      .add_new_goods .main .currency p:nth-of-type(4) select, .add_new_goods .main .currency p:nth-of-type(15) select {
+        width: 140px;
+        margin: 0 5px; }
+      .add_new_goods .main .currency p:nth-of-type(5) select {
+        width: 106px; }
+      .add_new_goods .main .currency p:nth-of-type(5) button {
+        background: #ddeef2;
+        color: #335b64; }
+      .add_new_goods .main .currency p:nth-of-type(5) em {
+        display: none; }
+      .add_new_goods .main .currency p:nth-of-type(7) input, .add_new_goods .main .currency p:nth-of-type(8) input {
+        width: 62px; }
+      .add_new_goods .main .currency p:nth-of-type(15) input {
+        width: 84px; }
+      .add_new_goods .main .currency p:nth-last-of-type(2) input:nth-of-type(2), .add_new_goods .main .currency p:nth-last-of-type(3) input:nth-of-type(2) {
+        margin-left: 140px;
+        width: 247px; }
+      .add_new_goods .main .currency p:nth-last-of-type(1) {
+        margin-bottom: 10px;
+        text-align: center; }
+        .add_new_goods .main .currency p:nth-last-of-type(1) button {
+          display: inline-block;
+          width: 54px;
+          height: 26px;
+          background: #ff3f3f;
+          color: #fff;
+          line-height: 26px;
+          text-align: center;
+          border: none;
+          border-radius: 3px;
+          margin: 0 4px; }
+      .add_new_goods .main .currency b {
+        display: block;
+        padding-left: 140px;
+        line-height: 18px;
+        color: #666666; }
+      .add_new_goods .main .currency .hidB {
+        display: none; }
+    .add_new_goods .main .describe {
+      display: none; }
+      .add_new_goods .main .describe textarea {
+        width: 800px;
+        margin: 10px;
+        height: 200px;
+        min-height: 100px;
+        min-width: 300px; }
+      .add_new_goods .main .describe p {
+        text-align: center;
+        margin-bottom: 15px; }
+        .add_new_goods .main .describe p button {
+          display: inline-block;
+          width: 54px;
+          height: 26px;
+          background: #ff3f3f;
+          color: #fff;
+          line-height: 26px;
+          text-align: center;
+          border: none;
+          border-radius: 3px;
+          margin: 0 4px; }
+    .add_new_goods .main .other {
+      width: 700px;
+      margin: 0 auto;
+      padding-top: 12px;
+      display: none; }
+      .add_new_goods .main .other p {
+        line-height: 40px; }
+        .add_new_goods .main .other p label {
+          width: 120px;
+          display: inline-block;
+          text-align: right;
+          padding-right: 20px; }
+          .add_new_goods .main .other p label img {
+            vertical-align: middle;
+            margin-right: 4px; }
+        .add_new_goods .main .other p input {
+          vertical-align: middle;
+          margin-right: 5px; }
+        .add_new_goods .main .other p em {
+          padding-left: 140px; }
+      .add_new_goods .main .other p:nth-last-of-type(1) {
+        margin-bottom: 10px;
+        text-align: center; }
+        .add_new_goods .main .other p:nth-last-of-type(1) button {
+          display: inline-block;
+          width: 54px;
+          height: 26px;
+          background: #ff3f3f;
+          color: #fff;
+          line-height: 26px;
+          text-align: center;
+          border: none;
+          border-radius: 3px;
+          margin: 0 4px; }
+      .add_new_goods .main .other p:nth-last-of-type(2) label, .add_new_goods .main .other p:nth-last-of-type(3) label {
+        vertical-align: top; }
+    .add_new_goods .main .attribute {
+      width: 700px;
+      margin: 0 auto;
+      padding-top: 12px;
+      display: none; }
+      .add_new_goods .main .attribute p {
+        padding: 10px 0; }
+        .add_new_goods .main .attribute p label {
+          width: 120px;
+          display: inline-block;
+          text-align: right;
+          padding-right: 20px; }
+          .add_new_goods .main .attribute p label img {
+            vertical-align: middle;
+            margin-right: 4px; }
+        .add_new_goods .main .attribute p b {
+          padding-left: 140px; }
+      .add_new_goods .main .attribute p:nth-last-of-type(1) {
+        margin-bottom: 10px;
+        text-align: center; }
+        .add_new_goods .main .attribute p:nth-last-of-type(1) button {
+          display: inline-block;
+          width: 54px;
+          height: 26px;
+          background: #ff3f3f;
+          color: #fff;
+          line-height: 26px;
+          text-align: center;
+          border: none;
+          border-radius: 3px;
+          margin: 0 4px; }
+    .add_new_goods .main .album {
+      padding: 30px 0 0 60px;
+      font-size: 12px;
+      display: none; }
+      .add_new_goods .main .album p {
+        line-height: 40px; }
+        .add_new_goods .main .album p input {
+          vertical-align: middle;
+          margin-right: 5px; }
+        .add_new_goods .main .album p input:nth-last-of-type(1) {
+          width: 200px; }
+      .add_new_goods .main .album p:nth-last-of-type(1) {
+        margin-bottom: 10px;
+        text-align: center; }
+        .add_new_goods .main .album p:nth-last-of-type(1) button {
+          display: inline-block;
+          width: 54px;
+          height: 26px;
+          background: #ff3f3f;
+          color: #fff;
+          line-height: 26px;
+          text-align: center;
+          border: none;
+          border-radius: 3px;
+          margin: 0 4px; }
+    .add_new_goods .main .associated {
+      display: none; }
+      .add_new_goods .main .associated p:nth-of-type(1) {
+        padding-top: 18px;
+        margin: 0 auto;
+        width: 992px; }
+        .add_new_goods .main .associated p:nth-of-type(1) select:nth-of-type(1) {
+          width: 160px; }
+        .add_new_goods .main .associated p:nth-of-type(1) select:nth-of-type(2) {
+          width: 106px; }
+        .add_new_goods .main .associated p:nth-of-type(1) input {
+          width: 130px;
+          height: 24px; }
+        .add_new_goods .main .associated p:nth-of-type(1) button {
+          display: inline-block;
+          width: 54px;
+          height: 26px;
+          background: #ff3f3f;
+          color: #fff;
+          line-height: 26px;
+          text-align: center;
+          border: none;
+          border-radius: 3px;
+          margin: 0 4px; }
+      .add_new_goods .main .associated .text_main {
+        overflow: hidden;
+        margin: 0 auto;
+        width: 992px; }
+        .add_new_goods .main .associated .text_main div {
+          float: left;
+          height: 380px; }
+          .add_new_goods .main .associated .text_main div span {
+            display: block;
+            text-align: center;
+            padding: 8px 0; }
+          .add_new_goods .main .associated .text_main div select {
+            width: 416px;
+            height: 344px; }
+        .add_new_goods .main .associated .text_main .text_left {
+          width: 416px; }
+        .add_new_goods .main .associated .text_main .operation {
+          width: 160px;
+          text-align: center; }
+          .add_new_goods .main .associated .text_main .operation span {
+            margin-bottom: 66px; }
+          .add_new_goods .main .associated .text_main .operation b, .add_new_goods .main .associated .text_main .operation em, .add_new_goods .main .associated .text_main .operation i {
+            display: block; }
+          .add_new_goods .main .associated .text_main .operation b {
+            line-height: 20px; }
+            .add_new_goods .main .associated .text_main .operation b input {
+              vertical-align: middle; }
+          .add_new_goods .main .associated .text_main .operation i, .add_new_goods .main .associated .text_main .operation em {
+            background: #ff3f3f;
+            height: 27px;
+            color: #fff;
+            border-radius: 3px;
+            margin: 16px auto 0;
+            line-height: 27px; }
+          .add_new_goods .main .associated .text_main .operation i {
+            width: 47px; }
+          .add_new_goods .main .associated .text_main .operation em {
+            width: 40px; }
+        .add_new_goods .main .associated .text_main .text_right {
+          width: 416px; }
+      .add_new_goods .main .associated p:nth-last-of-type(1) {
+        margin-bottom: 10px;
+        text-align: center; }
+        .add_new_goods .main .associated p:nth-last-of-type(1) button {
+          display: inline-block;
+          width: 54px;
+          height: 26px;
+          background: #ff3f3f;
+          color: #fff;
+          line-height: 26px;
+          text-align: center;
+          border: none;
+          border-radius: 3px;
+          margin: 0 4px; }
+    .add_new_goods .main .parts {
+      display: none; }
+      .add_new_goods .main .parts p:nth-of-type(1) {
+        padding-top: 18px;
+        margin: 0 auto;
+        width: 992px; }
+        .add_new_goods .main .parts p:nth-of-type(1) select:nth-of-type(1) {
+          width: 160px; }
+        .add_new_goods .main .parts p:nth-of-type(1) select:nth-of-type(2) {
+          width: 106px; }
+        .add_new_goods .main .parts p:nth-of-type(1) input {
+          width: 130px;
+          height: 24px; }
+        .add_new_goods .main .parts p:nth-of-type(1) button {
+          display: inline-block;
+          width: 54px;
+          height: 26px;
+          background: #ff3f3f;
+          color: #fff;
+          line-height: 26px;
+          text-align: center;
+          border: none;
+          border-radius: 3px;
+          margin: 0 4px; }
+      .add_new_goods .main .parts .text_main {
+        overflow: hidden;
+        margin: 0 auto;
+        width: 992px; }
+        .add_new_goods .main .parts .text_main div {
+          float: left;
+          height: 380px; }
+          .add_new_goods .main .parts .text_main div span {
+            display: block;
+            text-align: center;
+            padding: 8px 0; }
+          .add_new_goods .main .parts .text_main div select {
+            width: 416px;
+            height: 344px; }
+        .add_new_goods .main .parts .text_main .text_left {
+          width: 416px; }
+        .add_new_goods .main .parts .text_main .operation {
+          width: 160px;
+          text-align: center; }
+          .add_new_goods .main .parts .text_main .operation span {
+            margin-bottom: 66px; }
+          .add_new_goods .main .parts .text_main .operation b, .add_new_goods .main .parts .text_main .operation em, .add_new_goods .main .parts .text_main .operation i {
+            display: block; }
+          .add_new_goods .main .parts .text_main .operation b {
+            line-height: 20px; }
+            .add_new_goods .main .parts .text_main .operation b input {
+              vertical-align: middle; }
+          .add_new_goods .main .parts .text_main .operation i, .add_new_goods .main .parts .text_main .operation em {
+            background: #ff3f3f;
+            height: 27px;
+            color: #fff;
+            border-radius: 3px;
+            margin: 16px auto 0;
+            line-height: 27px; }
+          .add_new_goods .main .parts .text_main .operation i {
+            width: 47px; }
+          .add_new_goods .main .parts .text_main .operation em {
+            width: 40px; }
+        .add_new_goods .main .parts .text_main .text_right {
+          width: 416px; }
+      .add_new_goods .main .parts p:nth-last-of-type(1) {
+        margin-bottom: 10px;
+        text-align: center; }
+        .add_new_goods .main .parts p:nth-last-of-type(1) button {
+          display: inline-block;
+          width: 54px;
+          height: 26px;
+          background: #ff3f3f;
+          color: #fff;
+          line-height: 26px;
+          text-align: center;
+          border: none;
+          border-radius: 3px;
+          margin: 0 4px; }
+      .add_new_goods .main .parts .operation input {
+        width: 54px;
+        height: 24px; }
+    .add_new_goods .main .article {
+      display: none; }
+      .add_new_goods .main .article p:nth-of-type(1) {
+        padding-top: 18px;
+        margin: 0 auto;
+        width: 992px; }
+        .add_new_goods .main .article p:nth-of-type(1) select:nth-of-type(1) {
+          width: 160px; }
+        .add_new_goods .main .article p:nth-of-type(1) select:nth-of-type(2) {
+          width: 106px; }
+        .add_new_goods .main .article p:nth-of-type(1) input {
+          width: 130px;
+          height: 24px; }
+        .add_new_goods .main .article p:nth-of-type(1) button {
+          display: inline-block;
+          width: 54px;
+          height: 26px;
+          background: #ff3f3f;
+          color: #fff;
+          line-height: 26px;
+          text-align: center;
+          border: none;
+          border-radius: 3px;
+          margin: 0 4px; }
+      .add_new_goods .main .article .text_main {
+        overflow: hidden;
+        margin: 0 auto;
+        width: 992px; }
+        .add_new_goods .main .article .text_main div {
+          float: left;
+          height: 380px; }
+          .add_new_goods .main .article .text_main div span {
+            display: block;
+            text-align: center;
+            padding: 8px 0; }
+          .add_new_goods .main .article .text_main div select {
+            width: 416px;
+            height: 344px; }
+        .add_new_goods .main .article .text_main .text_left {
+          width: 416px; }
+        .add_new_goods .main .article .text_main .operation {
+          width: 160px;
+          text-align: center; }
+          .add_new_goods .main .article .text_main .operation span {
+            margin-bottom: 66px; }
+          .add_new_goods .main .article .text_main .operation b, .add_new_goods .main .article .text_main .operation em, .add_new_goods .main .article .text_main .operation i {
+            display: block; }
+          .add_new_goods .main .article .text_main .operation b {
+            line-height: 20px; }
+            .add_new_goods .main .article .text_main .operation b input {
+              vertical-align: middle; }
+          .add_new_goods .main .article .text_main .operation i, .add_new_goods .main .article .text_main .operation em {
+            background: #ff3f3f;
+            height: 27px;
+            color: #fff;
+            border-radius: 3px;
+            margin: 16px auto 0;
+            line-height: 27px; }
+          .add_new_goods .main .article .text_main .operation i {
+            width: 47px; }
+          .add_new_goods .main .article .text_main .operation em {
+            width: 40px; }
+        .add_new_goods .main .article .text_main .text_right {
+          width: 416px; }
+      .add_new_goods .main .article p:nth-last-of-type(1) {
+        margin-bottom: 10px;
+        text-align: center; }
+        .add_new_goods .main .article p:nth-last-of-type(1) button {
+          display: inline-block;
+          width: 54px;
+          height: 26px;
+          background: #ff3f3f;
+          color: #fff;
+          line-height: 26px;
+          text-align: center;
+          border: none;
+          border-radius: 3px;
+          margin: 0 4px; }
+  .add_new_goods .list_foot {
+    height: 50px;
+    border: 1px solid #dddddd;
+    background: #f3f3f3;
+    padding-top: 14px;
+    margin-bottom: 30px; }
+    .add_new_goods .list_foot p {
+      line-height: 18px;
+      text-align: center;
+      color: #9cacaf; }
+
+/*# sourceMappingURL=addgoods.css.map */

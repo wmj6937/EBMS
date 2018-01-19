@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/iconfont.css">		
+</head>
+<body>
+	<div id="login_box">
+		<div class="logo">
+			<img src="/img/shopex.png">
+		</div>
+		<div class="center">
+			<img src="/img/ecshop-logo.png" class="log">
+			<div class="login">
+				<p class="iconfont"><i>&#xe851;</i><input type="text" name="" id="name" placeholder="用户名"></p>
+				<p class="iconfont"><i>&#xe603;</i><input type="password" name="" id="pwd" placeholder="密码"></p>
+				<p class="iconfont"><i>&#xe60d;</i><input type="text" name="" id="code" placeholder="验证码"><span class="ran"></span></p>
+				<button>登录</button></br>
+				<div class="bar">
+					<input type="checkbox" name="check" id="check"><label for="check">保存登录信息</label>
+					<a href="#">忘记密码?</a>
+					<a href="#">去店铺首页&gt;&gt;</a>
+				</div>
+				<img src="/img/icloud-bar.png">
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+	function random(){
+	var ran = "";
+	for(var i = 0;i < 4;i ++){
+		ran += Math.floor(Math.random() * 10) || String.fromCharCode(Math.floor(Math.random() * (90 - 65 + 1) + 65));
+	}
+	return ran;
+	}
+	$(".ran").html(random());
+	$(".ran").click(function() {
+		$(".ran").html(random());
+	})
+	$("button").click(function(){
+		if($("#code").val() == $(".ran").html()){
+			loginajax();
+		}
+	})
+	function loginajax(){
+		$.ajax({
+			url : "/api/login",
+			type : "POST",
+			data : {
+				name : $("#name").val(),
+				pwd : $("#pwd").val()
+			},
+			success : function(res){
+				if(res.code == 1){
+					alert(res.massage);
+					location.href = "/index?t=" + new Date().getTime();
+				}else{
+					alert(res.massage);
+				}
+			}
+		});
+	}
+</script>
+</html>

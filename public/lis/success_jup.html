@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/success_jup.css">
+</head>
+<body>
+	<div id="add_success">
+		<h2>
+			<a href="#">ECSHOP管理中心</a>
+			<b>-系统信息</b>
+		</h2>
+		<div class="main_success">
+			<div>
+				<h4>
+					<img src="/img/information.gif">添加商品成功
+				</h4>
+				<p>如果您不做出选择,将在<i class="count_down">3</i>秒后跳转到第一个链接地址</p>
+				<p><img src="/img/arrow.gif"><a href="list.html">商品列表</a></p>
+				<p><img src="/img/arrow.gif"><a href="add_goods.html">添加新商品</a></p>
+			</div>	
+		</div>
+		<div class="list_foot">
+			<p>共执行 9 个查询，用时 0.039003 秒，Gzip 已禁用，内存占用 3.588 MB</p>
+			<p>版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。</p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="/js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+	var con = $(".count_down").html();
+	var time = setInterval(function(){
+		con --;
+		$(".count_down").html(con);
+		if(con <= 0){
+			window.location = "list.html";
+		}
+	},1000);
+</script>
+</html>

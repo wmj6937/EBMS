@@ -1,0 +1,113 @@
+@charset "UTF-8";
+body, ul, li, dl, dt, dd, p, ol, h1, h2, h3, h4, h5, h6, form, img, table, fieldset, legend, input, th, td, iframe {
+  margin: 0;
+  padding: 0; }
+
+ol, ul, li {
+  list-style: none; }
+
+img, input {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6, b, strong {
+  font-weight: 100; }
+
+body {
+  font-size: 12px;
+  font-family: "微软雅黑"; }
+
+input, a {
+  outline: none; }
+
+input, img {
+  vertical-align: top; }
+
+i, em {
+  font-style: normal; }
+
+html, body {
+  height: 100%; }
+
+#login_box {
+  width: 100%;
+  height: 100%;
+  background: url(../img/authorize-yqbg.jpg) no-repeat;
+  background-size: cover; }
+  #login_box .logo {
+    padding: 40px 0 0 50px; }
+  #login_box .center .log {
+    width: 248px;
+    height: 65px;
+    margin: 0 auto;
+    display: block; }
+  #login_box .center .login {
+    width: 302px;
+    padding: 51px 70px 30px 70px;
+    margin: 50px auto 0;
+    background: rgba(255, 255, 255, 0.85);
+    position: relative;
+    z-index: 10px; }
+    #login_box .center .login p {
+      height: 50px;
+      width: 100%;
+      border: 1px solid #dddddd; }
+      #login_box .center .login p i {
+        display: block;
+        float: left;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        line-height: 50px;
+        text-align: center;
+        color: #6b6b6b;
+        font-size: 20px !important; }
+      #login_box .center .login p input {
+        float: left;
+        height: 100%;
+        width: 252px; }
+    #login_box .center .login p:nth-of-type(1) {
+      border-radius: 3px 3px 0 0; }
+    #login_box .center .login p:nth-of-type(3) {
+      position: relative;
+      border-radius: 0 0 3px 3px; }
+      #login_box .center .login p:nth-of-type(3) span {
+        position: absolute;
+        display: block;
+        width: 102px;
+        height: 34px;
+        border: 1px solid #a1a1a1;
+        top: 8px;
+        right: 8px;
+        background: #e5b435;
+        text-align: center;
+        line-height: 34px; }
+    #login_box .center .login button {
+      margin-top: 20px;
+      height: 50px;
+      width: 100%;
+      color: #fff;
+      line-height: 20px;
+      background: #fc7878;
+      text-align: center;
+      border: none;
+      border-radius: 5px; }
+    #login_box .center .login .bar {
+      line-height: 42px; }
+      #login_box .center .login .bar input {
+        margin: 14px 10px 0 0; }
+      #login_box .center .login .bar label {
+        color: #666666;
+        margin-right: 24px; }
+      #login_box .center .login .bar a {
+        color: #41a5e1; }
+      #login_box .center .login .bar a:nth-of-type(2) {
+        float: right; }
+    #login_box .center .login img {
+      position: absolute;
+      bottom: -40px;
+      left: -16px; }
+
+/*# sourceMappingURL=login.css.map */
