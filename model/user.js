@@ -5,5 +5,5 @@ var user = new Schema({
 	pwd : String,
 	create_date : {type : Date,default : Date.now}
 });
-var model = mongoose.model("houtai",user);
+var model = mongoose.model("user",user);
 module.exports = model;

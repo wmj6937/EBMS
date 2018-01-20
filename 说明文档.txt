@@ -1,0 +1,5 @@
+1、用到express框架和mongodb数据库
+2、reglist.ejs注册页,注册成功需登录(数据库名h1723,文档名users)
+3、login.ejs登录页,session保存用户登录信息
+4、add_goods.html添加新商品页,商品名称、价格、分类为必填项(数据库名h1723,文档名addgoods)
+5、list.html列表页,关键词搜索功能,分页功能可改变每页显示数量、下拉选择,页面编辑更改商品信息功能,删除功能,新页面商品修改功能(the_editor.html)
